@@ -24,6 +24,6 @@ echo
 echo "Build The Kernel"
 echo 
 
-make -j$(nproc --all) O=out \
+time make -j$(nproc --all) O=out \
                       CC=clang \
                       CROSS_COMPILE=aarch64-linux-gnu-
