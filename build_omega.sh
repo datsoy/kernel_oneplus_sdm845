@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 echo
@@ -17,8 +18,8 @@ echo
 echo "Set DEFCONFIG"
 echo 
 make O=out omega_defconfig
-export PATH="/home/kristof/android/clang/bin:${PATH}"
-export LD_LIBRARY_PATH="/home/kristof/android/clang/lib:$LD_LIBRARY_PATH"
+export PATH="/home/datsoy/android/xcompiler/tc-build/install/bin:${PATH}"
+export LD_LIBRARY_PATH="/home/datsoy/android/xcompiler/tc-build/install/lib:$LD_LIBRARY_PATH"
 
 echo
 echo "Build The Kernel"
