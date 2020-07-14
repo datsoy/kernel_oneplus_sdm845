@@ -71,7 +71,7 @@
 static int enable_lmk = 1;
 module_param_named(enable_lmk, enable_lmk, int, 0644);
 
-static u32 lowmem_debug_level = 1;
+static u32 lowmem_debug_level = 0;
 static short lowmem_adj[6] = {
 	0,
 	1,
@@ -962,7 +962,7 @@ static unsigned long lowmem_batch_kill(
 						(long)(PAGE_SIZE / 1024),
 					global_node_page_state(NR_FILE_PAGES) *
 						(long)(PAGE_SIZE / 1024),
-					global_page_state(NR_SHMEM) *
+					global_node_page_state(NR_SHMEM) *
 						(long)(PAGE_SIZE / 1024),
 					total_swapcache_pages() *
 						(long)(PAGE_SIZE / 1024),
@@ -1320,7 +1320,7 @@ quick_select_fast:
 			(long)(PAGE_SIZE / 1024),
 			global_node_page_state(NR_FILE_PAGES) *
 			(long)(PAGE_SIZE / 1024),
-			global_page_state(NR_SHMEM) *
+			global_node_page_state(NR_SHMEM) *
 			(long)(PAGE_SIZE / 1024),
 			total_swapcache_pages() *
 			(long)(PAGE_SIZE / 1024),
